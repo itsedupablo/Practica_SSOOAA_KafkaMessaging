@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.example</groupId>
+	<artifactId>robots-kafka-microservicios</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>pom</packaging> <!-- Define este archivo como un POM de tipo
+	'padre' -->
+
+	<modules>
+		<module>cutting_robot_service</module>
+		<module>bending_robot_service</module>
+		<module>stacking_robot_service</module>
+		<module>transporting_robot_service</module>
+		<!-- Añade aquí otros microservicios si los tienes -->
+	</modules>
+
+	<dependencyManagement>
+		<dependencies>
+			<!-- Spring Boot BOM para gestionar versiones de dependencias de
+			Spring Boot -->
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-dependencies</artifactId>
+				<version>2.7.7</version> <!-- Ajusta la versión según necesites -->
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+
+			<!-- JUnit BOM para gestionar versiones de JUnit -->
+			<dependency>
+				<groupId>org.junit</groupId>
+				<artifactId>junit-bom</artifactId>
+				<version>5.11.0</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+	<dependencies>
+		<!-- Spring Boot Starter Web y otras dependencias comunes -->
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.kafka</groupId>
+			<artifactId>spring-kafka</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-actuator</artifactId>
+		</dependency>
+
+		<!-- Agrega más dependencias comunes según sea necesario -->
+	</dependencies>
+
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.springframework.boot</groupId>
+					<artifactId>spring-boot-maven-plugin</artifactId>
+					<version>2.7.7</version> <!-- Usa la versión adecuada aquí -->
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
+
+
+</project>
