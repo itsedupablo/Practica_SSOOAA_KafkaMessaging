@@ -1,0 +1,39 @@
+###
+
+# curl -X POST http://localhost:8081/api/v1/messages -H "Content-Type: application/json" -d '{"message": "bend"}'
+POST http://localhost:8081/api/v1/messages
+Content-Type: application/json
+
+{
+  "message": "bend"
+}
+
+###
+
+# curl -X POST http://localhost:8082/api/v1/messages -H "Content-Type: application/json" -d '{"message": "cut"}'
+POST http://localhost:8082/api/v1/messages
+Content-Type: application/json
+
+{
+  "message": "cut"
+}
+
+###
+
+# curl -X POST http://localhost:8083/api/v1/messages -H "Content-Type: application/json" -d '{"message": "stack"}'
+POST http://localhost:8083/api/v1/messages
+Content-Type: application/json
+
+{
+  "message": "stack"
+}
+
+###
+
+# curl -X POST http://localhost:8084/api/v1/messages -H "Content-Type: application/json" -d '{"message": "transport"}'
+POST http://localhost:8084/api/v1/messages
+Content-Type: application/json
+
+{
+  "message": "transport"
+}
